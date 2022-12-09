@@ -17,4 +17,6 @@ Category.init(
   }
 );
 
+// todo: add sequelize logic here
+
 module.exports = Category;

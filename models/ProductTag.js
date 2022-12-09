@@ -7,6 +7,18 @@ class ProductTag extends Model {}
 ProductTag.init(
   {
     // define columns
+    id: {
+      // todo: add id attributes
+  
+    },
+    product_id: {
+      // todo: add product_id attributes
+  
+    },
+    tag_id: {
+      // todo: add tag_id attributes
+  
+    },
   },
   {
     sequelize,
