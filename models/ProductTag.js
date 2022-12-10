@@ -9,15 +9,26 @@ ProductTag.init(
     // define columns
     id: {
       // todo: add id attributes
-  
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
     },
     product_id: {
       // todo: add product_id attributes
-  
+      type: DataTypes.INTEGER,
+      references: {// FK product model on id
+        model: 'product',
+        key: 'id'
+      }
     },
     tag_id: {
       // todo: add tag_id attributes
-  
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'tag',
+        key: 'id'
+      }
     },
   },
   {

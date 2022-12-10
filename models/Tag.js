@@ -9,11 +9,14 @@ Tag.init(
     // define columns
     id: {
       // todo: add id attributes
-  
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
     },
     tag_name: {
       // todo: add tag_name attributes
-  
+      type: DataTypes.STRING
     },
   },
   {
