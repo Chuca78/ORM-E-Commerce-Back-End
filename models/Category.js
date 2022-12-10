@@ -14,9 +14,16 @@ Category.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'category',
+  },
+
+// todo: sequelize logic
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'category',
   }
 );
-
-// todo: add sequelize logic here
 
 module.exports = Category;
