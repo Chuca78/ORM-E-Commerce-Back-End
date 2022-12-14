@@ -90,7 +90,7 @@ router.get('/:id', (req, res) => {
 
 
 // create new product
-// todo: write async/await promise this works
+// todo: write async/await promise - this works
 router.post('/', async (req, res) => {
   try {
     const productData = await Product.create(req.body);

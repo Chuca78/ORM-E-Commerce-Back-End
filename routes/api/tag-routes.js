@@ -5,13 +5,20 @@ const { Tag, Product, ProductTag } = require('../../models');
 
 // todo: write promises (.then or async/await)
 
-
-// todo: async/await promise
+// find all tags
+// be sure to include its associated Product data
+// todo: async/await promise - this doesn't work (only shows basic info)
+// router.get('/', async (req, res) => {
+//   try {
+//     const TagData = await Tag.findAll({ model: Product, through: ProductTag, as: 'productTag_product' });
+//       res.status(200).json(TagData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // todo: .then promise - this works
 router.get('/', (req, res) => {
-  // find all tags
-  // be sure to include its associated Product data
   Tag.findAll({
     include: [
       {
@@ -28,13 +35,24 @@ router.get('/', (req, res) => {
   });
 });
 
-
-// todo: async/await promise
+// find a single tag by its `id`
+// be sure to include its associated Product data
+// todo: async/await promise - this doesn't work
+// router.get('/:id', async(req, res) => {
+//   try {
+//     const TagData = await Tag.findByPk({model: Product, through: ProductTag, as: 'productTag_product'});
+//     if (!TagData) {
+//       res.status(404).json({ message: 'No tag found with this id!' });
+//       return;
+//     }
+//     res.status(200).json(TagData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // todo: .then promise - this works
 router.get('/:id', (req, res) => {
-  // find a single tag by its `id`
-  // be sure to include its associated Product data
   Tag.findOne({
     where: {
       id: req.params.id
@@ -47,12 +65,12 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-  .then(TagData => {
+  .then(tagData => {
     if (!TagData) {
       res.status(404).json({ message: 'No Tag found with this id' });
       return;
     }
-    res.json(TagData);
+    res.json(tagData);
   })
   .catch(err => {
     console.log(err);
@@ -60,12 +78,20 @@ router.get('/:id', (req, res) => {
   });
 });
 
+// create a new tag
+// todo: write async/await promise - this doesn't work
+// router.post('/', async (req, res) => {
+//   try {
+//     const tagData = await Tag.create(req.body);
+//     res.status(200).json(TagData);
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
 
-// todo: async/await promise
 
 // todo: .then promise - this works
 router.post('/', (req, res) => {
-  // create a new tag
   Tag.create({
     tag_name: req.body.tag_name
   })
@@ -105,11 +131,28 @@ router.put('/:id', (req, res) => {
 });
 
 
-// todo: async/await promise
+// todo: async/await promise - this doesn't work
+// DELETE a product
+// router.delete('/:id', async (req, res) => {
+//   // delete a category by its `id` value
+//   try {
+//     const TagData = await Tag.destroy({
+//       where: {
+//         id: req.params.id
+//       }
+//     });
+//     if (!TagData) {
+//       res.status(404).json({ message: 'No product found with this id!' });
+//       return;
+//     }
+//     res.status(200).json(TagData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // todo: .then promise - this works
 router.delete('/:id', (req, res) => {
-  // delete on tag by its `id` value
   Tag.destroy({
   where: {
     id: req.params.id

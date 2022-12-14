@@ -3,10 +3,9 @@ const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 
-// todo: this works
-// todo: async/await promise
 // GET all categories
 // find and return all categories with associated products
+// todo: async/await promise - this works
 router.get('/', async (req, res) => {
   try {
     const categoryData = await Category.findAll({ include: Product });
@@ -16,8 +15,8 @@ router.get('/', async (req, res) => {
   }
 });
 
-// todo: this works
-// todo: async/await promise
+// todo: async/await promise - this works
+// find a single tag by its `id`
 router.get('/:id', async(req, res) => {
   try {
     const categoryData = await Category.findByPk(req.params.id,{ include: Product });
@@ -31,8 +30,7 @@ router.get('/:id', async(req, res) => {
   }
 });
 
-// todo: this works
-// todo: async/await promise
+// todo: async/await promise - this works
 // CREATE a category
 router.post('/', async (req, res) => {
   try {
@@ -43,7 +41,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// todo: this works
+// todo: .then promise - this works
 // rewrote for .then (async wasn't working)
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
@@ -89,11 +87,9 @@ router.put('/:id', (req, res) => {
 //   }
 // });
 
-// todo: this works
-// todo: async/await promise
-// DELETE a category
+// todo: async/await promise - this works
+// delete a category by its `id` value
 router.delete('/:id', async (req, res) => {
-  // delete a category by its `id` value
   try {
     const categoryData = await Category.destroy({
       where: {
