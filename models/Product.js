@@ -11,19 +11,16 @@ Product.init(
   {
     // define columns
     id: {
-    // todo: add id attributes
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
     product_name: {
-    // todo: add product_name attributes
       type: DataTypes.STRING,
       allowNull: false
     },
     price: {
-    // todo: add price attributes
       type:DataTypes.DECIMAL,
       allowNull:false,
       validate: {
@@ -31,7 +28,6 @@ Product.init(
     }
     },
     stock: {
-    // todo: add stock attributes
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10,
@@ -40,7 +36,6 @@ Product.init(
       }
     },
     category_id: {
-    // todo: add category_id attributes
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
