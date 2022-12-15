@@ -31,6 +31,31 @@ To start the application, please type the following command in the terminal:
 ```
 npm run seed, npm start
 ```
+### Application Demo
+
+- Initinalize, seed, and run 
+ 
+ [Initinalize, seed, and run](https://user-images.githubusercontent.com/97859682/207977873-dc1510f5-0bde-4917-ab09-3544c2dec428.webm)
+
+- Find all routes to return categories, tags, and products 
+ 
+ [Find all routes to return categories, tags, and products](https://user-images.githubusercontent.com/97859682/207977898-c6673e67-b182-4dda-996e-1a53535c456a.webm)
+
+- Find one route to return a single category, tag, and product 
+
+ [Find one route to return a single category, tag, and product](https://user-images.githubusercontent.com/97859682/207986142-496c5a9a-9294-487f-9e6a-3ce6eb730238.webm)
+
+- Add, Update, and Delete routes for Categories 
+
+ [Add, Update, and Delete routes for Categories](https://user-images.githubusercontent.com/97859682/207986150-b7e8b3f3-47a7-4525-be2c-cddc4430497d.webm)
+
+- Add, Update, and Delete routes for Tags
+
+   [Add, Update, and Delete routes for Tags](https://user-images.githubusercontent.com/97859682/207977938-3077874c-7810-46e6-a4d5-d8c4e9949ba6.webm)
+
+- Add, Update, and Delete routes for Products 
+
+ [Add, Update, and Delete routes for Products](https://user-images.githubusercontent.com/97859682/207986119-908011eb-39ac-46cd-8e74-f2c7fae4ae9b.webm)
 
 ## Credits
 
